@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pro Habit Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Habit Tracker</h1>
+
+    <!-- LOGIN -->
+    <div id="loginSection">
+        <input type="text" id="username" placeholder="Enter username">
+        <button onclick="login()">Login</button>
+    </div>
+
+    <!-- APP -->
+    <div id="appSection" style="display:none;">
+
+        <h3 id="dateDisplay"></h3>
+
+        <div class="input-section">
+            <input type="text" id="habitInput" placeholder="Enter a habit">
+            <button onclick="addHabit()">Add</button>
+        </div>
+
+        <ul id="habitList"></ul>
+
+        <h3>Weekly Progress</h3>
+        <canvas id="chart" width="300" height="200"></canvas>
+
+        <button onclick="enableNotifications()">Enable Reminder</button>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+<script src="firebase.js"></script>
+</body>
+</html>
